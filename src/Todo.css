@@ -1,123 +1,92 @@
 .App {
   text-align: center;
+  color: var(--primary-color);
+  margin-top: 15px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --primary-color: #d11a7e;
+  --secondary-color: #461661;
+  --tertiary-color : #be268b;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
 
 form {
   width: 1170px;
   max-width: 90%;
   margin: 30px auto 0;
   display: flex;
-  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 form input {
   height: 45px;
-  flex-basis: 80%;
+  flex: 1;
   padding: 0 15px;
   font-size: 18px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
   box-sizing: border-box;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  outline: none;
 }
 
 form button {
-  flex-basis: 20%;
   height: 45px;
+  width: 150px;
   border: none;
   border-radius: 8px;
-  background: linear-gradient(135deg, #7c3aed, #a855f7);
-  color: white;
+  color: #fff;
+  background: linear-gradient(135deg, var(--secondary-color), var(--tertiary-color) );
   font-size: 18px;
   font-weight: 600;
-  cursor: pointer;
   transition: 0.3s;
 }
 
-form button:hover {
-  background: linear-gradient(135deg, #6d28d9, #9333ea);
-  transform: translateY(-2px);
-}
 
 .outerDiv {
   width: 1170px;
   max-width: 90%;
-  margin: auto;
+  margin: 30px auto 0;
 }
 
 .outerDiv ul {
   list-style: none;
-  margin-top: 50px 0 0;
+  margin: 0;
   padding: 0;
 }
 
 .outerDiv ul li {
+  color: white;
+  background-color: var(--secondary-color);
   text-align: left;
-  position: relative;
   font-size: 25px;
-  background: #1e1b2e;
-  color: #f5f3ff;
   margin-bottom: 20px;
   padding: 10px 50px 10px 15px;
+  position: relative;
   border-radius: 8px;
-  border-left: 4px solid #a855f7;
+  border-left: 4px solid var(--primary-color);
 }
 
 .outerDiv ul li span {
   position: absolute;
   right: 20px;
   cursor: pointer;
-  top: 50%;
   font-size: 30px;
   font-weight: bold;
-  transform: translateY(-50%);
+  top: 5%;
+  
 }
 
 .outerDiv ul li span:hover {
-  color: red;
+  color: #c4b5fd;;
 }
 
 .completed {
   text-decoration: line-through;
-  background-color: #312e81 !important;
-  color: #c4b5fd !important;
-  border-left: 4px solid #22c55e !important;
+  background-color: var(--tertiary-color) !important;
+  color: #fff !important;
+  border-left: 4px solid var(--secondary-color) !important;
 }
 
 
